@@ -11,6 +11,6 @@ const gallerysList = document.querySelector("#ingredients");
 
 ingredients.forEach((ingredient) => {
   const createLi = document.createElement("li");
-  const addToUl = ingredientsList.appendChild(createLi);
+  const addToUl = gallerysList.appendChild(createLi);
   return addToUl.prepend(ingredient);
 });
