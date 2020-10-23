@@ -9,8 +9,10 @@ const ingredients = [
 
 const gallerysList = document.querySelector("#ingredients");
 
-ingredients.forEach((ingredient) => {
+const asd = ingredients.map((ingredient) => {
   const createLi = document.createElement("li");
-  const addToUl = gallerysList.appendChild(createLi);
-  return addToUl.prepend(ingredient);
+  createLi.textContent = ingredient;
+  return createLi;
 });
+
+gallerysList.prepend(...asd);

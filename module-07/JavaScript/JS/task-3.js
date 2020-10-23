@@ -18,16 +18,8 @@ const images = [
 
 let addTagString = ``;
 
-images.forEach(
-  (image) =>
-    (addTagString += `<li><img src=${image.url} alt=${image.alt}></li>`)
-);
-
-const addImages = document.querySelector("#gallery");
-addImages.insertAdjacentHTML("afterbegin", addTagString);
-
-const imgRef = addImages.querySelectorAll("img");
-
-imgRef.forEach((img) => {
-  img.classList.add("random-images");
+images.forEach((image) => {
+  addTagString += `<li><img class="random-images" src=${image.url} alt=${image.alt}></li>`;
 });
+const galleryRef = document.querySelector("#gallery");
+galleryRef.insertAdjacentHTML("afterbegin", addTagString);
